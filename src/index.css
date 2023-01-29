@@ -136,6 +136,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 50vh;
 }
 .lds-roller {
   display: inline-block;
@@ -222,8 +223,16 @@ body {
   }
 }
 /* end of loading */
-
+.title-wrapper {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
 /* cocktails */
+
 .cocktail-title {
   font-size: 3rem;
   text-transform: capitalize;
@@ -303,4 +312,91 @@ body {
     justify-content: space-around;
     align-items: flex-start;
   }
+  .search {
+    flex-direction: column;
+  }
 }
+.search {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.search label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.search input {
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border: 2px solid var(--dark-blue);
+}
+.search input:active {
+  outline: none;
+}
+.search input:focus {
+  outline: none;
+}
+/* single cocktail page */
+.single-cocktail-wrapper {
+  margin-top: 2rem;
+}
+.single-cocktail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* min-height: 100vh; */
+  margin-top: 5rem;
+}
+.single-cocktail-img {
+  border-radius: 50%;
+  flex: 0 1 50%;
+}
+.coltail-info {
+  flex: 0 1 45%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.single-cocktail-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.drink-data + span {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.drink-data {
+  background-color: var(--dark-blue);
+  color: black;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+.ingridients {
+  display: flex;
+  align-items: center;
+}
+.ingridients .ing {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.back {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .single-cocktail {
+    flex-direction: column;
+  }
+}
+/* end of single cocktail page */

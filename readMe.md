@@ -12,3 +12,11 @@
   </Routes>
 </BrowserRouter>
 ```
+
+### Dynamic Link
+
+```js
+<Link className="btn-details" to={`cocktail/${id}`}>
+  details
+</Link>
+```
