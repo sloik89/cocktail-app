@@ -13,7 +13,18 @@ const AppProvider = ({ children }) => {
       const data = await response.json();
       const { drinks } = data;
       if (drinks) {
-        setCocktails(drinks);
+        const newDrinks = drinks.map((item) => {
+          const { idDrink, strDrinkThumb, strDrink, strAlcoholic, strGlass } =
+            item;
+          return {
+            id: idDrink,
+            name: strDrink,
+            image: strDrinkThumb,
+            info: strAlcoholic,
+            glass: strGlass,
+          };
+        });
+        setCocktails(newDrinks);
         setLoading(false);
       } else {
         setLoading(false);
